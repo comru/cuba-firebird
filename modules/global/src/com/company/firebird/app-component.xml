@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<app-component xmlns="http://schemas.haulmont.com/cuba/app-component.xsd"
+               dependsOn="com.haulmont.cuba, com.haulmont.fts">
+    <module blocks="*" name="global">
+        <artifact appJar="true" name="firebird-global"/>
+        <property name="cuba.persistenceConfig" value="+com/company/firebird/persistence.xml"/>
+        <property name="cuba.metadataConfig" value="+com/company/firebird/metadata.xml"/>
+        <property name="cuba.viewsConfig" value="+com/company/firebird/views.xml"/>
+    </module>
+    <module blocks="core" dependsOn="global" name="core">
+        <artifact appJar="true" name="firebird-core"/>
+        <property name="cuba.springContextConfig" value="+com/company/firebird/spring.xml"/>
+        <property name="cuba.mainMessagePack" value="+com.company.firebird.core"/>
+        <artifact classifier="db" configuration="dbscripts" ext="zip" name="firebird-core"/>
+    </module>
+    <module blocks="web,desktop" dependsOn="global" name="gui">
+        <artifact appJar="true" name="firebird-gui"/>
+    </module>
+    <module blocks="web" dependsOn="gui" name="web">
+        <artifact appJar="true" name="firebird-web"/>
+        <artifact classifier="web" configuration="webcontent" ext="zip" name="firebird-web"/>
+        <property name="cuba.springContextConfig" value="+com/company/firebird/web-spring.xml"/>
+        <property name="cuba.dispatcherSpringContextConfig" value="+com/company/firebird/web-dispatcher-spring.xml"/>
+        <property name="cuba.windowConfig" value="+com/company/firebird/web-screens.xml"/>
+        <property name="cuba.menuConfig" value="+com/company/firebird/web-menu.xml"/>
+        <property name="cuba.permissionConfig" value="+com/company/firebird/web-permissions.xml"/>
+        <property name="cuba.mainMessagePack" value="+com.company.firebird.web"/>
+    </module>
+</app-component>

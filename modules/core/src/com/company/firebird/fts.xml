@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fts-config xmlns="http://schemas.haulmont.com/cuba/fts.xsd">
+    <entities>
+        <entity class="com.company.firebird.entity.Customer">
+            <include re=".*"/>
+            <searchables>
+                <![CDATA[
+                searchables.add('a')
+                        searchables.add('b')]]>
+            </searchables>
+        </entity>
+    </entities>
+</fts-config>

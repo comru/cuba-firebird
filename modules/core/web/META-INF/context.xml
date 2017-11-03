@@ -1,0 +1,12 @@
+<Context>
+    <!-- Database connection -->
+    <Resource driverClassName="org.firebirdsql.jdbc.FBDriver" maxIdle="2" maxTotal="20" maxWaitMillis="5000"
+              name="jdbc/CubaDS" password="masterkey" type="javax.sql.DataSource"
+              url="jdbc:firebirdsql://localhost/firebird" username="sysdba"/>
+    <!-- Switch off session serialization -->
+    <Manager pathname=""/>
+    <!--<Resource driverClassName="org.hsqldb.jdbc.JDBCDriver" maxIdle="2" maxTotal="20" maxWaitMillis="5000" name="jdbc/CubaDS"
+          password="" type="javax.sql.DataSource" url="jdbc:hsqldb:hsql://localhost/firebird" username="sa"/>-->
+    <!--<Resource driverClassName="oracle.jdbc.OracleDriver" maxIdle="2" maxTotal="20" maxWaitMillis="5000" name="jdbc/CubaDS"
+          password="cuba" type="javax.sql.DataSource" url="jdbc:oracle:thin:@//localhost/orcl" username="firebird"/>-->
+</Context>

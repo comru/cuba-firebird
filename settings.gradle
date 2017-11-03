@@ -1,0 +1,6 @@
+rootProject.name = 'firebird'
+include(':firebird-global', ':firebird-core', ':firebird-gui', ':firebird-web')
+project(':firebird-global').projectDir = new File(settingsDir, 'modules/global')
+project(':firebird-core').projectDir = new File(settingsDir, 'modules/core')
+project(':firebird-gui').projectDir = new File(settingsDir, 'modules/gui')
+project(':firebird-web').projectDir = new File(settingsDir, 'modules/web')

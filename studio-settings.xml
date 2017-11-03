@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<studio>
+    <settings>
+        <displayXmlAttributesOnSeparateLines>false</displayXmlAttributesOnSeparateLines>
+        <maxXmlLineLength>120</maxXmlLineLength>
+        <hotDeployMapping>modules/global/src:conf/firebird-core</hotDeployMapping>
+        <hotDeployMapping>modules/core/src:conf/firebird-core</hotDeployMapping>
+        <hotDeployMapping>modules/global/src:conf/firebird</hotDeployMapping>
+        <hotDeployMapping>modules/web/src:conf/firebird</hotDeployMapping>
+        <hotDeployMapping>modules/gui/src:conf/firebird</hotDeployMapping>
+    </settings>
+</studio>
